@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+.container {
+  position: relative;
+  width: 47rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px 10px rgba(158, 175, 194, 0.15);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.image {
+  width: 50%;
+  clip-path: inset(0 4.5rem 0 0);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  margin-right: 1rem 2rem;
+  position: relative;
+  right: 30px;
+}
+
+h2 {
+  color:var(--Very-Dark-Grayish-Blue);
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.desc {
+  color: var(--Desaturated-Dark-Blue);
+  font-weight: 600;
+  font-size: 0.8em;
+  padding: 15px 0;
+  line-height: 19px;
+  opacity: 0.8;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.profile img {
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+  border-radius: 50px;
+}
+
+.profile-name {
+  margin-left: 20px;
+}
+
+.name {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.date {
+  color: var(--Grayish-Blue);
+  font-size: 0.8rem;
+}
+
+.share-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--Light-Grayish-Blue);
+  border-radius: 50%;
+  padding: 0.8rem;
+  border: none;
+  margin-left: 8rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.share-btn:hover {
+  background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.share-btn:hover svg path {
+  fill: #fff;
+}
+
+.share {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  width: 220px;
+  height: 55px;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 100;
+  padding: 0.2rem 1.3rem;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  right: -37px;
+  top: 145px;
+  transition: visibility 0.2s linear, opacity 0.2s linear;
+}
+.arrow {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  bottom: -10px;
+}
+
+.share p {
+  text-transform: uppercase;
+  color: var(--Grayish-Blue);
+  font-weight: 200;
+  letter-spacing: 0.4rem;
+  font-size: 13px;
+  font-weight: 500;
+  padding-right: 0.4rem;
+}
+
+.icons {
+  transition: all 0.2s ease-in-out;
+}
+
+.icons:hover {
+  cursor: pointer;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 30px;
+  }
+  .container {
+    width: 440px;
+    height: auto;
+    box-shadow: 0 10px 20px 10px rgba(158, 175, 194, 0.15);
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: aqua; */
+  }
+
+  .image {
+    width: 96%;
+    clip-path: inset(0 0 3.5rem 0);
+  }
+
+  .content {
+    width: 94%;
+    position: relative;
+    top: -0px;
+    left: 1px;
+    padding: 0 40px 0 40px;
+  }
+  .desc {
+    font-size: 0.9em;
+    line-height: 1.3rem;
+  }
+
+  .profile {
+    margin-bottom: 25px;
+  }
+
+  .profile-name {
+    width: 140px;
+  }
+  .name {
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+
+  .share {
+    width: 440px;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .arrow {
+    display: none;
+  }
+  .share {
+    position: absolute;
+    top: 565px;
+    left: -0px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  .active {
+    background-color: var(--Grayish-Blue);
+  }
+  .active:hove {
+    background-color: var(--Very-Dark-Grayish-Blue);
+  }
+  .active svg path {
+    fill: #fff;
+  }
+}
+
+@media (min-width: 777px) {
+  .active {
+    display: none;
+  }
+}
